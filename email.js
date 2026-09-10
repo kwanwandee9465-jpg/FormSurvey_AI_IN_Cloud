@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const welcome = document.querySelector('#welcome');
   const startButton = document.querySelector('#start-btn');
-  if (!welcome || !startButton) return;
+  if (!welcome || !startButton || document.querySelector('.email-field')) return;
   const style = document.createElement('style');
   style.textContent = '.email-field{background:#fbfdff;border:1px solid #dfe7f0;border-radius:13px;padding:16px 18px;margin-bottom:24px;max-width:730px}.email-field label{display:block;font-size:13px;font-weight:700;margin-bottom:8px}.email-field label small{color:#6f7d91;font-weight:400;margin-left:6px}.email-field input{width:100%;border:1px solid #cbd7e5;border-radius:8px;padding:11px 12px;font:14px inherit;color:#17253d;background:#fff}.email-field input:focus{outline:3px solid #dbe7ff;border-color:#3264dd}.email-field p{margin:7px 0 0;color:#6f7d91;font-size:11px}';
   document.head.appendChild(style);
