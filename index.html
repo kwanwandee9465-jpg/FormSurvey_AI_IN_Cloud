@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="แบบสอบถามการขับเคลื่อนคุณค่าทางธุรกิจดิจิทัลด้วยความสามารถเชิงจิตวิทยาและความสามารถแบบอไจล์" />
+    <title>แบบสอบถามคุณค่าทางธุรกิจดิจิทัล</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="หน้าแรก"><span class="brand-mark">DV</span><span>Digital Value<br><small>Research Survey</small></span></a>
+      <div class="language-switch" role="group" aria-label="ภาษา"><button class="lang active" data-language="th">ไทย</button><button class="lang" data-language="en">English</button></div>
+    </header>
+
+    <main id="top" class="shell">
+      <section id="welcome" class="hero card">
+        <div class="eyebrow">แบบสอบถามวิจัย · 36 ข้อ · ใช้เวลาประมาณ 10–15 นาที</div>
+        <h1>การขับเคลื่อนคุณค่าทางธุรกิจดิจิทัล<br /><span>ด้วยความสามารถเชิงจิตวิทยาและอไจล์</span></h1>
+        <p class="lead">แบบสอบถามนี้ศึกษาความสัมพันธ์ระหว่างทุนมนุษย์ ความสามารถของทีม และความสำเร็จของโครงการดิจิทัลในองค์กร</p>
+        <div class="hero-grid"><div><span class="mini-label">รูปแบบการตอบ</span><strong>มาตราส่วน 5 ระดับ</strong></div><div><span class="mini-label">การรักษาความลับ</span><strong>ไม่ระบุชื่อ</strong></div><div><span class="mini-label">ภาษา</span><strong>ไทย / English</strong></div></div>
+        <div class="notice"><span class="notice-icon">i</span><p>โปรดตอบจากประสบการณ์ของทีมโครงการที่ท่านมีส่วนร่วม หรือโครงการที่ท่านรับผิดชอบ โดยเลือกคำตอบที่ตรงกับความคิดเห็นของท่านมากที่สุด</p></div>
+        <button id="start-btn" class="primary-btn">เริ่มทำแบบสอบถาม <span>→</span></button>
+      </section>
+
+      <section id="survey" class="survey-layout hidden">
+        <div class="survey-main">
+          <div class="survey-head"><div><div class="eyebrow" id="section-kicker">ส่วนที่ 1 จาก 8</div><h2 id="section-title">Human Capital</h2><p id="section-description">ทุนมนุษย์ของทีมโครงการ</p></div><div class="completion"><strong id="progress-percent">0%</strong><span>เสร็จแล้ว</span></div></div>
+          <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+          <form id="survey-form"></form>
+          <div class="form-actions"><button id="prev-btn" type="button" class="secondary-btn">← ย้อนกลับ</button><button id="next-btn" type="button" class="primary-btn">ถัดไป <span>→</span></button></div>
+        </div>
+        <aside class="survey-aside"><div class="aside-card"><span class="aside-number" id="section-number">01</span><h3 id="aside-title">Human Capital</h3><p id="aside-note">ความรู้ ประสบการณ์ และทักษะทางเทคนิคของทีม</p></div><div class="aside-card scale-card"><h3>ระดับความคิดเห็น</h3><div class="scale-list"><span><b>1</b> ไม่เห็นด้วยอย่างยิ่ง</span><span><b>2</b> ไม่เห็นด้วย</span><span><b>3</b> ไม่แน่ใจ</span><span><b>4</b> เห็นด้วย</span><span><b>5</b> เห็นด้วยอย่างยิ่ง</span></div></div></aside>
+      </section>
+
+      <section id="complete" class="complete card hidden"><div class="success-mark">✓</div><div class="eyebrow">ขอบคุณสำหรับการมีส่วนร่วม</div><h2>ส่งคำตอบเรียบร้อยแล้ว</h2><p>คำตอบของท่านถูกส่งเพื่อบันทึกใน Google Sheets แล้ว ข้อมูลไม่มีชื่อหรือข้อมูลติดต่อที่ระบุตัวบุคคลได้</p><div class="summary-box"><div><span>จำนวนข้อที่ตอบ</span><strong id="answered-count">36 / 36</strong></div><div><span>สถานะ</span><strong id="submit-status">กำลังบันทึก</strong></div></div><button id="restart-btn" class="secondary-btn">เริ่มทำแบบสอบถามใหม่</button></section>
+    </main>
+    <footer><span>Digital Business Value Research</span><span>แบบสอบถามเพื่อการวิจัย</span></footer>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
